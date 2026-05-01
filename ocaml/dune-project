@@ -1,0 +1,24 @@
+(lang dune 3.22)
+
+(name weather)
+
+(source
+ (github username/reponame))
+
+(authors "Author Name <author@example.com>")
+
+(maintainers "Kevin Schweikert <maintainer@example.com>")
+
+(license MIT)
+
+(documentation https://url/to/documentation)
+
+(package
+ (name weather)
+ (synopsis "A short synopsis")
+ (description "A longer description")
+ (depends ocaml ezcurl yojson)
+ (tags
+  ("weather" "to describe" your project)))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

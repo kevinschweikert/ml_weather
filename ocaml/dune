@@ -1,0 +1,4 @@
+(executable
+ (public_name weather)
+ (name main)
+ (libraries yojson ezcurl))

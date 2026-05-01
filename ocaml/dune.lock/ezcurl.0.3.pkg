@@ -1,0 +1,19 @@
+(version 0.3)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run dune build -p %{pkg-self:name} -j %{jobs} @install))))))
+
+(depends
+ (all_platforms
+  (dune ocurl ocaml)))
+
+(source
+ (fetch
+  (url
+   https://github.com/c-cube/ezcurl/releases/download/v0.3/ezcurl-0.3.tbz)
+  (checksum
+   sha256=8e78446da57acc63a976b70693ff77e3ab73efd605a45dc892e21ceeb344bb0e)))
